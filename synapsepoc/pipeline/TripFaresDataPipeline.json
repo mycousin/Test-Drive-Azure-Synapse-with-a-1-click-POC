@@ -465,11 +465,11 @@
 			},
 			"SynapseWorkspaceName": {
 				"type": "string",
-				"defaultValue": "polykbyaganzcbufqpocws1.database.windows.net"
+				"defaultValue": "sadodn5jcezgvjmpoc.dfs.core.windows.net"
 			},
 			"SQLDedicatedPoolName": {
 				"type": "string",
-				"defaultValue": "polykbyaganzcbufqpocws1p1"
+				"defaultValue": "psadodn5jcezgvjmpoc"
 			},
 			"SQLLoginUsername": {
 				"type": "string",
@@ -477,11 +477,11 @@
 			},
 			"KeyVaultName": {
 				"type": "string",
-				"defaultValue": "kvpolykbyaganzcbufqpoc"
+				"defaultValue": "sadodn5jcezgvjmpoc"
 			},
 			"datalakeAccountName": {
 				"type": "string",
-				"defaultValue": "polykbyaganzcbufqpoc"
+				"defaultValue": "sadodn5jcezgvjmpoc"
 			}
 		},
 		"folder": {
