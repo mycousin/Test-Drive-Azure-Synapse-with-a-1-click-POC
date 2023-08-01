@@ -465,7 +465,7 @@
 			},
 			"SynapseWorkspaceName": {
 				"type": "string",
-				"defaultValue": "sadodn5jcezgvjmpocws1.dfs.core.windows.net"
+				"defaultValue": "ssadodn5jcezgvjmpocws1.sql.azuresynapse.net"
 			},
 			"SQLDedicatedPoolName": {
 				"type": "string",
