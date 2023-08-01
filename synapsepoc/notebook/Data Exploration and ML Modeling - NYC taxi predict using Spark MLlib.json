@@ -12,12 +12,12 @@
 			"driverCores": 8,
 			"executorMemory": "56g",
 			"executorCores": 8,
-			"numExecutors": 39,
+			"numExecutors": 9,
 			"conf": {
 				"spark.dynamicAllocation.enabled": "false",
-				"spark.dynamicAllocation.minExecutors": "39",
-				"spark.dynamicAllocation.maxExecutors": "39",
-				"spark.autotune.trackingId": "f9ce41b2-1fb9-42d2-82be-17eaf169a489"
+				"spark.dynamicAllocation.minExecutors": "9",
+				"spark.dynamicAllocation.maxExecutors": "9",
+				"spark.autotune.trackingId": "9f0657a5-f0be-4c7a-99f3-289b8a763c3f"
 			}
 		},
 		"metadata": {
@@ -40,7 +40,7 @@
 					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "2.4",
-				"nodeCount": 3,
+				"nodeCount": 10,
 				"cores": 8,
 				"memory": 56,
 				"automaticScaleJobs": true
@@ -79,7 +79,7 @@
 					"from pyspark.mllib.evaluation import BinaryClassificationMetrics\n",
 					"from pyspark.ml.evaluation import BinaryClassificationEvaluator"
 				],
-				"execution_count": 1
+				"execution_count": 2
 			},
 			{
 				"cell_type": "markdown",
