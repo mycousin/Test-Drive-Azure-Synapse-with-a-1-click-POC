@@ -524,7 +524,7 @@
 					},
 					"KeyVaultName": {
 						"type": "string",
-						"defaultValue": "sadodn5jcezgvjmpoc"
+						"defaultValue": "kvsadodn5jcezgvjmpoc"
 					},
 					"datalakeAccountName": {
 						"type": "string",
