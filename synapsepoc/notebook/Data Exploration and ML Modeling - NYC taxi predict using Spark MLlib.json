@@ -8,16 +8,16 @@
 			"type": "BigDataPoolReference"
 		},
 		"sessionProperties": {
-			"driverMemory": "28g",
-			"driverCores": 4,
-			"executorMemory": "28g",
-			"executorCores": 4,
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
 			"numExecutors": 9,
 			"conf": {
 				"spark.dynamicAllocation.enabled": "true",
 				"spark.dynamicAllocation.minExecutors": "9",
-				"spark.dynamicAllocation.maxExecutors": "23",
-				"spark.autotune.trackingId": "d8d3ef87-903a-4fd7-99f9-67e6be8ca724"
+				"spark.dynamicAllocation.maxExecutors": "11",
+				"spark.autotune.trackingId": "ee369b6e-ddfe-4f89-bb45-57370c6d38e0"
 			}
 		},
 		"metadata": {
