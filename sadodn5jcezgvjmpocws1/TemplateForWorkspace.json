@@ -1317,16 +1317,16 @@
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
-					"driverMemory": "56g",
-					"driverCores": 8,
-					"executorMemory": "56g",
-					"executorCores": 8,
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
 					"numExecutors": 9,
 					"conf": {
-						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.enabled": "true",
 						"spark.dynamicAllocation.minExecutors": "9",
 						"spark.dynamicAllocation.maxExecutors": "9",
-						"spark.autotune.trackingId": "a5b9188e-e354-4bff-a0dc-d379500141e9"
+						"spark.autotune.trackingId": "c5b8e829-398b-4e2d-9c9e-d7fe05d62784"
 					}
 				},
 				"metadata": {
@@ -1662,18 +1662,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/sadodn5jcezgvjmpocws1p1')]",
-			"type": "Microsoft.Synapse/workspaces/sqlPools",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"collation": "SQL_Latin1_General_CP1_CI_AS",
-				"maxSizeBytes": 263882790666240,
-				"annotations": []
-			},
-			"dependsOn": [],
-			"location": "uaenorth"
-		},
-		{
 			"name": "[concat(parameters('workspaceName'), '/ws1sparkpool1')]",
 			"type": "Microsoft.Synapse/workspaces/bigDataPools",
 			"apiVersion": "2019-06-01-preview",
@@ -1718,6 +1706,18 @@
 				"sparkVersion": "3.3",
 				"isComputeIsolationEnabled": false,
 				"sessionLevelPackagesEnabled": false,
+				"annotations": []
+			},
+			"dependsOn": [],
+			"location": "uaenorth"
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/sadodn5jcezgvjmpocws1p1')]",
+			"type": "Microsoft.Synapse/workspaces/sqlPools",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"collation": "SQL_Latin1_General_CP1_CI_AS",
+				"maxSizeBytes": 263882790666240,
 				"annotations": []
 			},
 			"dependsOn": [],
