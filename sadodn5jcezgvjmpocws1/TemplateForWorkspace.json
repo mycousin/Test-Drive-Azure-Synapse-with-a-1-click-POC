@@ -1312,12 +1312,12 @@
 					"driverCores": 8,
 					"executorMemory": "56g",
 					"executorCores": 8,
-					"numExecutors": 9,
+					"numExecutors": 10,
 					"conf": {
-						"spark.dynamicAllocation.enabled": "true",
-						"spark.dynamicAllocation.minExecutors": "9",
-						"spark.dynamicAllocation.maxExecutors": "11",
-						"spark.autotune.trackingId": "b2445e03-4c08-4116-97e5-d85176593efe"
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "10",
+						"spark.dynamicAllocation.maxExecutors": "10",
+						"spark.autotune.trackingId": "517e7b28-db91-4e64-b031-f44639950764"
 					}
 				},
 				"metadata": {
@@ -1340,7 +1340,7 @@
 							"authResource": "https://dev.azuresynapse.net"
 						},
 						"sparkVersion": "2.4",
-						"nodeCount": 12,
+						"nodeCount": 3,
 						"cores": 8,
 						"memory": 56,
 						"automaticScaleJobs": false
@@ -1653,6 +1653,18 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/sadodn5jcezgvjmpocws1p1')]",
+			"type": "Microsoft.Synapse/workspaces/sqlPools",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"collation": "SQL_Latin1_General_CP1_CI_AS",
+				"maxSizeBytes": 263882790666240,
+				"annotations": []
+			},
+			"dependsOn": [],
+			"location": "uaenorth"
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/ws1sparkpool1')]",
 			"type": "Microsoft.Synapse/workspaces/bigDataPools",
 			"apiVersion": "2019-06-01-preview",
@@ -1662,28 +1674,16 @@
 					"delayInMinutes": 15
 				},
 				"autoScale": {
-					"enabled": false,
+					"enabled": true,
 					"maxNodeCount": 40,
 					"minNodeCount": 3
 				},
-				"nodeCount": 12,
+				"nodeCount": 0,
 				"nodeSize": "Medium",
 				"nodeSizeFamily": "MemoryOptimized",
 				"sparkVersion": "2.4",
 				"isComputeIsolationEnabled": false,
 				"sessionLevelPackagesEnabled": false,
-				"annotations": []
-			},
-			"dependsOn": [],
-			"location": "uaenorth"
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/sadodn5jcezgvjmpocws1p1')]",
-			"type": "Microsoft.Synapse/workspaces/sqlPools",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"collation": "SQL_Latin1_General_CP1_CI_AS",
-				"maxSizeBytes": 263882790666240,
 				"annotations": []
 			},
 			"dependsOn": [],
