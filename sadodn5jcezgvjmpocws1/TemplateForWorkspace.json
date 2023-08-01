@@ -1308,16 +1308,16 @@
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
-					"driverMemory": "56g",
-					"driverCores": 8,
-					"executorMemory": "56g",
-					"executorCores": 8,
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
 					"numExecutors": 9,
 					"conf": {
 						"spark.dynamicAllocation.enabled": "true",
 						"spark.dynamicAllocation.minExecutors": "9",
 						"spark.dynamicAllocation.maxExecutors": "9",
-						"spark.autotune.trackingId": "0f1f88a4-bd63-48ff-ae24-71a6b559857c"
+						"spark.autotune.trackingId": "fdb59fc8-ba65-44f7-a393-6544a3e84467"
 					}
 				},
 				"metadata": {
@@ -1340,9 +1340,9 @@
 							"authResource": "https://dev.azuresynapse.net"
 						},
 						"sparkVersion": "2.4",
-						"nodeCount": 10,
-						"cores": 8,
-						"memory": 56,
+						"nodeCount": 3,
+						"cores": 4,
+						"memory": 28,
 						"automaticScaleJobs": true
 					},
 					"sessionKeepAliveTimeout": 30
