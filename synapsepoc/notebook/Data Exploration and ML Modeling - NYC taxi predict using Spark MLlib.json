@@ -4,21 +4,20 @@
 		"nbformat": 4,
 		"nbformat_minor": 2,
 		"bigDataPool": {
-			"referenceName": "ws1sparkpool1",
+			"referenceName": "ws1sparkpool2",
 			"type": "BigDataPoolReference"
 		},
 		"sessionProperties": {
-			"driverMemory": "28g",
-			"driverCores": 4,
-			"executorMemory": "28g",
-			"executorCores": 4,
-			"numExecutors": 1,
-			"runAsWorkspaceSystemIdentity": false,
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
+			"numExecutors": 9,
 			"conf": {
-				"spark.dynamicAllocation.enabled": "true",
-				"spark.dynamicAllocation.minExecutors": "1",
-				"spark.dynamicAllocation.maxExecutors": "1",
-				"spark.autotune.trackingId": "069a1afb-5a15-4a53-8fec-71e844b630c0"
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "9",
+				"spark.dynamicAllocation.maxExecutors": "9",
+				"spark.autotune.trackingId": "f6c8d4c0-cf8b-4b5c-b0fa-562e5904e96b"
 			}
 		},
 		"metadata": {
@@ -32,16 +31,16 @@
 				"name": "python"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/5363b65a-4727-482c-89c0-8283efe5ebce/resourceGroups/rg-sandy-footprint-sa/providers/Microsoft.Synapse/workspaces/sadodn5jcezgvjmpocws1/bigDataPools/ws1sparkpool1",
-				"name": "ws1sparkpool1",
+				"id": "/subscriptions/5363b65a-4727-482c-89c0-8283efe5ebce/resourceGroups/rg-sandy-footprint-sa/providers/Microsoft.Synapse/workspaces/sadodn5jcezgvjmpocws1/bigDataPools/ws1sparkpool2",
+				"name": "ws1sparkpool2",
 				"type": "Spark",
-				"endpoint": "https://sadodn5jcezgvjmpocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool1",
+				"endpoint": "https://sadodn5jcezgvjmpocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool2",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
 				},
-				"sparkVersion": "2.4",
-				"nodeCount": 3,
+				"sparkVersion": "3.3",
+				"nodeCount": 10,
 				"cores": 8,
 				"memory": 56,
 				"automaticScaleJobs": false
