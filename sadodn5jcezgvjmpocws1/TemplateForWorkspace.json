@@ -1308,16 +1308,16 @@
 					"type": "BigDataPoolReference"
 				},
 				"sessionProperties": {
-					"driverMemory": "56g",
-					"driverCores": 8,
-					"executorMemory": "56g",
-					"executorCores": 8,
+					"driverMemory": "28g",
+					"driverCores": 4,
+					"executorMemory": "28g",
+					"executorCores": 4,
 					"numExecutors": 9,
 					"conf": {
 						"spark.dynamicAllocation.enabled": "true",
 						"spark.dynamicAllocation.minExecutors": "9",
-						"spark.dynamicAllocation.maxExecutors": "9",
-						"spark.autotune.trackingId": "78035f2f-13e8-421f-afe7-37f97670b93b"
+						"spark.dynamicAllocation.maxExecutors": "23",
+						"spark.autotune.trackingId": "d04d6bc3-3990-435d-995d-f6d317e7da1f"
 					}
 				},
 				"metadata": {
@@ -1382,7 +1382,7 @@
 							"from pyspark.ml.evaluation import BinaryClassificationEvaluator"
 						],
 						"outputs": [],
-						"execution_count": 3
+						"execution_count": 1
 					},
 					{
 						"cell_type": "markdown",
@@ -1410,7 +1410,7 @@
 							"nyc_tlc_df = nyc_tlc.to_spark_dataframe()"
 						],
 						"outputs": [],
-						"execution_count": 4
+						"execution_count": null
 					},
 					{
 						"cell_type": "code",
@@ -1662,11 +1662,11 @@
 					"delayInMinutes": 15
 				},
 				"autoScale": {
-					"enabled": true,
+					"enabled": false,
 					"maxNodeCount": 40,
 					"minNodeCount": 3
 				},
-				"nodeCount": 0,
+				"nodeCount": 12,
 				"nodeSize": "Medium",
 				"nodeSizeFamily": "MemoryOptimized",
 				"sparkVersion": "2.4",
