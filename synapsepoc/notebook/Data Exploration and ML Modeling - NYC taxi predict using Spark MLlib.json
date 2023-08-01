@@ -4,20 +4,20 @@
 		"nbformat": 4,
 		"nbformat_minor": 2,
 		"bigDataPool": {
-			"referenceName": "ws1sparkpool1",
+			"referenceName": "ws1sparkpool3",
 			"type": "BigDataPoolReference"
 		},
 		"sessionProperties": {
-			"driverMemory": "56g",
-			"driverCores": 8,
-			"executorMemory": "56g",
-			"executorCores": 8,
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
 			"numExecutors": 2,
 			"conf": {
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "bb73874c-1c47-46be-971a-1d12c5403d0f"
+				"spark.autotune.trackingId": "06fd8382-a24d-47a3-8a08-76d4b5050409"
 			}
 		},
 		"metadata": {
@@ -31,18 +31,18 @@
 				"name": "python"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/5363b65a-4727-482c-89c0-8283efe5ebce/resourceGroups/rg-sandy-footprint-sa/providers/Microsoft.Synapse/workspaces/sadodn5jcezgvjmpocws1/bigDataPools/ws1sparkpool1",
-				"name": "ws1sparkpool1",
+				"id": "/subscriptions/5363b65a-4727-482c-89c0-8283efe5ebce/resourceGroups/rg-sandy-footprint-sa/providers/Microsoft.Synapse/workspaces/sadodn5jcezgvjmpocws1/bigDataPools/ws1sparkpool3",
+				"name": "ws1sparkpool3",
 				"type": "Spark",
-				"endpoint": "https://sadodn5jcezgvjmpocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool1",
+				"endpoint": "https://sadodn5jcezgvjmpocws1.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ws1sparkpool3",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
 				},
-				"sparkVersion": "2.4",
+				"sparkVersion": "3.3",
 				"nodeCount": 3,
-				"cores": 8,
-				"memory": 56,
+				"cores": 4,
+				"memory": 28,
 				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
@@ -104,7 +104,7 @@
 					"nyc_tlc = NycTlcYellow(start_date=start_date, end_date=end_date)\n",
 					"nyc_tlc_df = nyc_tlc.to_spark_dataframe()"
 				],
-				"execution_count": null
+				"execution_count": 3
 			},
 			{
 				"cell_type": "code",
@@ -112,7 +112,7 @@
 					"#To make development easier, faster and less expensive downsample for now\n",
 					"sampled_taxi_df = nyc_tlc_df.sample(True, 0.001, seed=1234)"
 				],
-				"execution_count": null
+				"execution_count": 4
 			},
 			{
 				"cell_type": "markdown",
@@ -153,7 +153,7 @@
 					"plt.suptitle('')\n",
 					"plt.show()"
 				],
-				"execution_count": null
+				"execution_count": 5
 			},
 			{
 				"cell_type": "markdown",
@@ -185,7 +185,7 @@
 					"                                & (sampled_taxi_df.paymentType.isin({\"1\", \"2\"}))\n",
 					"                                )"
 				],
-				"execution_count": null
+				"execution_count": 6
 			},
 			{
 				"cell_type": "markdown",
@@ -211,7 +211,7 @@
 					"                                              )\\\n",
 					"                                       .filter((taxi_df.tripTimeSecs >= 30) & (taxi_df.tripTimeSecs <= 7200))"
 				],
-				"execution_count": null
+				"execution_count": 7
 			},
 			{
 				"cell_type": "markdown",
@@ -238,7 +238,7 @@
 					"# Create a new dataframe that has had the encodings applied\n",
 					"encoded_final_df = Pipeline(stages=[sI1, en1, sI2, en2]).fit(taxi_featurised_df).transform(taxi_featurised_df)"
 				],
-				"execution_count": null
+				"execution_count": 8
 			},
 			{
 				"cell_type": "markdown",
@@ -259,7 +259,7 @@
 					"# Split the dataframe into test and training dataframes\n",
 					"train_data_df, test_data_df = encoded_final_df.randomSplit([trainingFraction, testingFraction], seed=seed)"
 				],
-				"execution_count": null
+				"execution_count": 9
 			},
 			{
 				"cell_type": "markdown",
@@ -293,7 +293,7 @@
 					"metrics = BinaryClassificationMetrics(predictionAndLabels)\n",
 					"print(\"Area under ROC = %s\" % metrics.areaUnderROC)"
 				],
-				"execution_count": null
+				"execution_count": 10
 			},
 			{
 				"cell_type": "markdown",
@@ -317,7 +317,7 @@
 					"plt.ylabel('True Positive Rate')\n",
 					"plt.show()"
 				],
-				"execution_count": null
+				"execution_count": 11
 			}
 		]
 	}
