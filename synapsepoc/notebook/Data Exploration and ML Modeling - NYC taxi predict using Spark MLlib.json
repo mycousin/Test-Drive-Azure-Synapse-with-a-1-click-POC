@@ -14,10 +14,10 @@
 			"executorCores": 8,
 			"numExecutors": 9,
 			"conf": {
-				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.enabled": "true",
 				"spark.dynamicAllocation.minExecutors": "9",
 				"spark.dynamicAllocation.maxExecutors": "9",
-				"spark.autotune.trackingId": "9f0657a5-f0be-4c7a-99f3-289b8a763c3f"
+				"spark.autotune.trackingId": "0ed0c29a-bc30-43a5-b9dc-b95eb2f1e0e7"
 			}
 		},
 		"metadata": {
@@ -79,7 +79,7 @@
 					"from pyspark.mllib.evaluation import BinaryClassificationMetrics\n",
 					"from pyspark.ml.evaluation import BinaryClassificationEvaluator"
 				],
-				"execution_count": 2
+				"execution_count": 1
 			},
 			{
 				"cell_type": "markdown",
